@@ -1,0 +1,55 @@
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 300px 1fr auto;
+}
+
+.header,
+.nav {
+    background: lightpink;
+    padding: 1rem;
+    grid-column: 1 / 5;
+    /* span all four columns */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+
+
+
+.left-sidebar {
+    background: lightblue;
+    grid-column: 1 / 2;
+}
+
+main {
+    background: coral;
+    grid-column: 2 / 3;
+}
+
+.right-sidebar {
+    background: yellow;
+    grid-column: 3 / 4;
+}
+
+footer {
+    background: wheat;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+.left-sidebar,
+.right-sidebar {
+    padding: 1rem;
+}
