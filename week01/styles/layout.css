@@ -1,8 +1,8 @@
 body {
     display: grid;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
-    /* Keep the other rows unchanged */
+    grid-template-rows: auto minmax(50px, 1fr) auto;
+    /* Adjusted grid-template-rows */
     grid-template-columns: 300px 1fr auto;
 }
 
@@ -15,7 +15,6 @@ header {
 nav {
     background: lightgray;
     padding: 1rem 0;
-    /* Adjust padding to change the height */
     grid-column: 1 / 4;
     text-align: center;
 }
@@ -43,7 +42,8 @@ nav ul li:last-child {
 main {
     background: coral;
     grid-column: 2 / 3;
-    grid-row: 3;
+    grid-row: 2;
+    /* Adjusted grid-row */
 }
 
 .right-sidebar {
