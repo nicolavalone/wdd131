@@ -2,20 +2,27 @@ body {
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
+    /* Keep the other rows unchanged */
     grid-template-columns: 300px 1fr auto;
 }
 
-.header,
-.nav {
+header {
     background: lightpink;
-    padding: 1rem;
-    grid-column: 1 / 5;
-    /* span all four columns */
+    padding: 2rem;
+    grid-column: 1 / 4;
+}
+
+nav {
+    background: lightgray;
+    padding: 1rem 0;
+    /* Adjust padding to change the height */
+    grid-column: 1 / 4;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
 }
 
@@ -24,8 +31,9 @@ nav ul li {
     margin-right: 1rem;
 }
 
-
-
+nav ul li:last-child {
+    margin-right: 0;
+}
 
 .left-sidebar {
     background: lightblue;
@@ -35,6 +43,7 @@ nav ul li {
 main {
     background: coral;
     grid-column: 2 / 3;
+    grid-row: 3;
 }
 
 .right-sidebar {
@@ -44,7 +53,7 @@ main {
 
 footer {
     background: wheat;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     grid-column: 1 / 4;
 }
