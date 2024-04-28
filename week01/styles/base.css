@@ -63,21 +63,121 @@ nav ul li a:hover {
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* Three columns for the left box and one column for the right box */
+    gap: 10px;
+    /* Gap between the boxes */
+    padding: 50px;
+    /* Add padding for spacing */
+
 }
+
+.left-box {
+    background-color: lightblue;
+    /* Example background color */
+    padding: 20px;
+    /* Example padding */
+    border-radius: 1%;
+}
+
+.right-box {
+    background-color: lightgreen;
+    /* Example background color */
+    padding: 20px;
+    /* Example padding */
+    border-radius: 2%;
+}
+
+.right-box h2 {
+    text-align: center;
+    /* Center the title */
+}
+
+.right-box ul {
+    text-align: center;
+    /* Center the text */
+    list-style: none;
+    /* Remove the bullets */
+    padding-top: 90px;
+    /* Add space between the links and the top */
+}
+
+.right-box li {
+    margin-bottom: 10px;
+    /* Add space between each link */
+}
+
+.right-box li a {
+    font-size: 1.2em;
+    /* Increase the font size */
+}
+
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .card {
     background-color: #f0f0f0;
     padding: 20px;
 }
+
+/* Adjust profile picture */
+.profile-picture {
+    float: left;
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Adjust paragraph about you */
+.left-box p {
+    /* Remove any float and width properties */
+    float: none;
+    width: auto;
+    margin-bottom: 50px;
+    /* Add margin to the bottom */
+    text-align: justify;
+    /* Align text to justify */
+}
+
+
+/* About Me and João Pessoa Section Titles */
+.left-box h2,
+.jp-section h2 {
+    text-align: center;
+    /* Align text to center */
+    text-decoration: underline;
+    /* Underline the text */
+}
+
+/* João Pessoa Section */
+.jp-section p {
+    text-align: justify;
+    /* Align text to justify */
+}
+
+/* Rest of your CSS styles... */
+
+
+/* Adjust João Pessoa picture */
+.jp-section img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10%;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Rest of your CSS styles... */
+
 
 footer {
     background-color: #333;
